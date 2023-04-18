@@ -40,12 +40,12 @@ const App = () => {
   return (
     /* returnの中は1つのタグで囲われている必要がある */
     <>
-      {/* styleを直接反省させるとき、オブジェクトの形（{}）で指定する */}
+      {/* styleを直接反映させるとき、オブジェクトの形（{}）で指定する */}
       <h1 style={contentStyle}>こんにちは</h1>
 
       {/* 他のjsxで書いたColorfulMessage（コンポーネント）を読み込んで表示する */}
       <ColorfulMessage myColor="bule" myFontSize="18px">
-        ここの子要素を渡すこともできる
+        元気ですか（ここの子要素を渡すこともできる）
       </ColorfulMessage>
       <ColorfulMessage myColor="pink" myFontSize="16px">
         元気です
@@ -55,6 +55,7 @@ const App = () => {
       <button onClick={onClickButton}>Count Up!</button>
       <p>現在のカウント：{num}</p>
 
+      {/* 顔文字 */}
       <br />
       <button onClick={() => setFaceShowFlag(!faceShowFlag)}>
         Face on/off
